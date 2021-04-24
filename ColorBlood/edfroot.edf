@@ -1,0 +1,53 @@
+stdinclude("root.edf")
+setdialect("ALFHEIM")
+
+// NOTE: bloodcolor only changes particle blood colour (only if activated in the menu). We need to
+// also change the blood sprite colour.
+
+//
+// Translated versions of Doom blood
+//
+thingtype DoomBloodBlue : DoomBlood
+{
+    translation REDBLUE
+}
+thingtype DoomBloodGreen : DoomBlood
+{
+    translation REDGREEN
+}
+
+thingdelta
+{
+    name BaronOfHell
+    bloodcolor 2    // green
+    bloodtype.normal DoomBloodGreen
+    bloodtype.impact DoomBloodGreen
+    bloodtype.rip DoomBloodGreen
+    bloodtype.crush DoomBloodGreen
+}
+
+thingdelta
+{
+    name Cacodemon
+    bloodcolor 3    // blue
+    bloodtype.normal DoomBloodBlue
+    bloodtype.impact DoomBloodBlue
+    bloodtype.rip DoomBloodBlue
+    bloodtype.crush DoomBloodBlue
+}
+
+thingdelta
+{
+    name HellKnight
+    bloodcolor 2    // green
+    bloodtype.normal DoomBloodGreen
+    bloodtype.impact DoomBloodGreen
+    bloodtype.rip DoomBloodGreen
+    bloodtype.crush DoomBloodGreen
+}
+
+thingdelta
+{
+    name LostSoul
+    addflags NOBLOOD
+}
